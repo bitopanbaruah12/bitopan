@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="x-2.css">
+</head>
+<body>
+     <nav class="navbar">
+        <ul class="navbar-content">
+            
+            <button  onclick="window.location.href='x-1.html'">Register</button>
+        </ul>
+        
+    </nav>
+    <div class="box">
+        Menu
+        
+        <ul class="box-1">
+            <li class="box1">Home</li>
+            <li class="box1">Account</li>
+            <li class="box1">Create Event</li>
+            <li class="box1">Manage Attendance</li>
+            
+        </ul>
+        
+    </div>
+    <div class="container">
+            <span>Enter Your Details To Login</span>
+            <input type="text" name="" id="Email" placeholder="Enter Your Email"> 
+            <input type="text" name="" id="Name" placeholder="User Name"> 
+            <input type="text" name="" id="Password" placeholder="Password">
+            <button onclick="login()" >Login</button>
+             <div class="Register">Do You Have a Account? 
+                
+            <a href="x-1.html">Register</a>
+        </div>
+    </div>
+    <script>
+        function login() {
+            const email=document.getElementById("Email").value.trim();
+            const name=document.getElementById("Name").value.trim();
+            const password=document.getElementById("Password").value;
+
+
+            if (email===""||name===""||password==="") {
+                alert("Please fill all the details");
+
+                return;
+            }
+
+            else if (email==="bitopan"|| name==="bitopan baruah"|| password==="302010") {
+                    alert("Login Successfull");
+                    window.location.href = "x.html";
+                     document.getElementById("Email").value ="";
+                document.getElementById("Name").value ="";
+                document.getElementById("Password").value ="";
+
+                    
+                }
+            else{
+                alert("Invalid login Details");
+               
+                document.getElementById("Email").value ="";
+                document.getElementById("Name").value ="";
+                document.getElementById("Password").value ="";
+                
+            }
+            
+
+
+            
+            
+        }
+    </script>
+</body>
+</html>
